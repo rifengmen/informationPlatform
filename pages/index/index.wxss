@@ -1,0 +1,84 @@
+/**index.wxss**/
+.userinfo {
+  width: 690rpx;
+  height: 140rpx;
+  line-height: 140rpx;
+  border-top: 1rpx #cecece solid;
+  border-bottom: 1rpx #cecece solid;
+  padding: 0 10rpx;
+}
+.userimg {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  border:1rpx #1470cc solid;
+  overflow: hidden;
+  padding: 10rpx;
+  margin-top: 20rpx;
+}
+.userimg image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.username {
+  margin-left: 10rpx; 
+}
+.shopbtn {
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 40rpx;
+  border: 1rpx #ff9500 solid;
+  border-radius: 6rpx;
+}
+.shopslist {
+  width: 100%;
+}
+.shopslist .shopinfo {
+  width: 100%;
+  padding: 20rpx 10rpx; 
+}
+.shopinfo .shoptit {
+  width: 100%;
+  height: 120rpx;
+
+}
+.shopinfo .shopimg {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 14rpx;
+  overflow: hidden;
+}
+.shopinfo .shopimg image {
+  width: 100%;
+  height: 100%;
+}
+.shopinfo .shopname {
+  width: 550rpx;
+  margin-right: 20rpx;
+  padding-top: 10rpx;
+}
+.shopinfo .shopname .name {
+  width: 500rpx;
+}
+.shopinfo .shopname .area {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 6rpx;
+}
+.shopinfo .vipclass {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.shopinfo .shoptags {
+  padding: 10rpx 4rpx;
+}
+.shopinfo .tags {
+  display: inline-block;
+  padding: 6rpx;
+  margin-right: 10rpx;
+  border-radius: 14rpx;
+}

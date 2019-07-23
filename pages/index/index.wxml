@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 用户信息 start -->
+  <view class="userinfo">
+    <view class="userimg fl">
+      <image src="/lib/images/userimg.png"></image>
+    </view>
+    <view class="username fl">
+      <text class="font34 font_blod color1470cc">用户名称</text>
+    </view>
+    <navigator class="shopbtn fr font26 colorff9500 bgfff tc" url="{{isSetShop ? '/pages/shopInfo/shopInfo' : '/pages/register/register'}}">{{isSetShop ? "进入店铺" : "开设店铺"}}</navigator>
+  </view>
+  <!-- 用户信息 end -->
+  <!-- 店铺列表 start -->
+  <view class="shopslist">
+    <!-- 店铺简介 start -->
+    <view class="shopinfo" wx:for="{{shopsList}}" wx:key="index">
+      <view class="shoptit">
+        <view class="shopimg fl">
+          <image class="img" src="{{item.img}}"></image>
+        </view>
+        <view class="shopname fr color666">
+          <image class="vipclass fl" src="{{vipClass[1]}}"></image>
+          <view class="name font32 color333 ellipsis fl">{{item.name}}</view>
+          <image class="area" src="/lib/images/area.png"></image>
+          <text class="font28">{{item.area}}</text>
+        </view>
+      </view>
+      <view class="shoptags">
+        <!-- 店铺标签 start -->
+        <text wx:for="{{item.tags}}" wx:key="index" class="tags font26 color333 bgcecece">{{item}}</text>
+        <!-- 店铺标签 end -->
+      </view>
+      <view>
+        <text>{{item.des}}</text>
+      </view>
+    </view>
+    <!-- 店铺简介 end -->
+  </view>
+  <!-- 店铺列表 end -->
+</view>

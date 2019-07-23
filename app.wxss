@@ -1,0 +1,8 @@
+/**app.wxss**/
+@import "/lib/style/base.wxss";
+.container {
+  width: 710rpx;
+  height: 100%;
+  padding: 0 20rpx;
+} 
+

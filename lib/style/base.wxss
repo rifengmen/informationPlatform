@@ -1,0 +1,155 @@
+/* 字体尺寸 start */
+.font10 {
+  font-size: 10rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font12 {
+  font-size: 12rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font14 {
+  font-size: 14rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font16 {
+  font-size: 16rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font18 {
+  font-size: 18rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font20 {
+  font-size: 20rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font22 {
+  font-size: 22rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font24 {
+  font-size: 24rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font26 {
+  font-size: 26rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font28 {
+  font-size: 28rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font30 {
+  font-size: 30rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font32 {
+  font-size: 32rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font34 {
+  font-size: 34rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font36 {
+  font-size: 36rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font38 {
+  font-size: 38rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.font40 {
+  font-size: 40rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+/* 字体尺寸 end */
+
+/* 字体粗细 start */
+.font_lighter {
+  font-weight: lighter;
+}
+.font_blod{
+  font-weight: bold;
+}
+.font_bloder {
+  font-weight: bolder
+}
+.font_inherit {
+  font-weight: inherit;
+}
+/* 字体粗细 end */
+
+/* 字体颜色 start */
+.color000 {
+  color: #000;
+}
+.color333 {
+  color: #333;
+}
+.color666 {
+  color: #666;
+}
+.color999 {
+  color: #999;
+}
+.colorfff {
+  color: #fff;
+}
+.color1470cc {
+  color: #1470cc;
+}
+.coloree410c {
+  color: #ee410c;
+}
+.colorff9500 {
+  color: #ff9500;
+}
+/* 字体颜色 end */
+
+/* 背景颜色 start */
+.bgfff {
+  background-color: #fff;
+}
+.bg1470cc {
+  background-color: #1470cc;
+}
+.bgee410c {
+  background-color: #ee410c;
+}
+.bgff9500 {
+  background-color: #ff9500;
+}
+.bgcecece {
+  background-color: #cecece;
+}
+.bge7e7e7 {
+  background-color: #e7e7e7;
+}
+/* 背景颜色 end */
+
+/* 单行文本溢出隐藏 start */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 单行文本溢出隐藏 end */
+
+/* 布局方式 start */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.tl {
+  text-align: left;
+}
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+/* 布局方式 end */
