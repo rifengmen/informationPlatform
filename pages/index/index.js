@@ -9,6 +9,17 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     // 是否注册商铺
     isSetShop: false,
+    // 店铺分类
+    categoryArray: ['美国', '中国', '巴西', '日本'],
+    // 分类序号
+    categoryIndex: 0,
+    // 所在地区
+    region: ['广东省', '广州市', '海珠区'],
+    customItem: '全部',
+    // 排序方式
+    sortArray: ['综合','销量','价格'],
+    // 排序序号
+    sortIndex: 0,
     // 商铺列表
     shopsList: [
       {
@@ -93,7 +104,13 @@ Page({
       }
     ],
     // vip等级
-    vipClass: []
+    vipClass: [],
+    // 是否显示下拉提示
+    isPullDownShow: false,
+    // 下拉刷新提示文字
+    pullDownText: true,
+    // 搜索内容
+    search_val: ""
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
@@ -126,19 +143,33 @@ Page({
   },
   // 下拉刷新
   onPullDownRefresh: function () {
-    wx.startPullDownRefresh({
-      // 成功执行
-      success: function () {
-
+    wx.showLoading({
+      title: '内容刷新中...',
+      mask: true
+    })
+    wx.request({
+      url: 'http://www.baidu00.com',
+      success:function(){
+        wx.hideLoading()
+        console.log('success')
       },
-      // 失败执行
       fail: function () {
-
+        wx.hideLoading()
+        wx.showToast({
+          title: '网络异常',
+          icon: 'loading',
+          duration: 2000
+        })
+        setTimeout(function () { wx.hideToast()},2000)
       }
     })
   },
-  getUserInfo: function (e) {
-    console.log(e)
+  // 上拉触底加载
+  onReachBottom: function () {
+    this.getShopDes();
+  },
+  // 获取用户信息
+  getUserInfo: function () {
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
@@ -149,6 +180,49 @@ Page({
   getVIP: function () {
     this.setData({
       vipClass: app.globalData.VIP
+    })
+  },
+  // 获取搜索内容
+  getSearchVal: function(e) {
+    this.setData({
+      search_val: e.detail.value
+    });
+    wx.request({
+      url: '',
+    })
+  },
+  // 按店铺分类查询
+  categoryChange: function (e) {
+    this.setData({
+      categoryIndex: e.detail.value
+    });
+    wx.request({
+      url: '',
+    })
+  },
+  // 按所在地区查询
+  regionChange: function (e) {
+    this.setData({
+      region: e.detail.value
+    });
+    wx.request({
+      url: '',
+    })
+  },
+  // 排序方式修改
+  sortChange: function (e) {
+    this.setData({
+      sortIndex: e.detail.value
+    });
+    wx.request({
+      url: '',
+    })
+  },
+  // 加载商铺信息
+  getShopDes: function () {
+    console.log(1)
+    wx.request({
+      url: '',
     })
   }
 })

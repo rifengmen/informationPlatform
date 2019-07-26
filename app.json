@@ -16,7 +16,7 @@
     "navigationBarTitleText": "首页",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true,
-    "onReachBottomDistance": 50
+    "onReachBottomDistance": -100
   },
   "tabBar": {
     "list": [

@@ -2,39 +2,61 @@
 <view class="container">
   <!-- 用户信息 start -->
   <view class="userinfo">
-    <view class="userimg fl">
-      <image src="/lib/images/userimg.png"></image>
-    </view>
-    <view class="username fl">
-      <text class="font34 font_blod color1470cc">用户名称</text>
-    </view>
+    <navigator class="user fl" url="/pages/userInfo/userInfo" open-type="reLaunch">
+      <view class="userimg fl">
+        <image src="/lib/images/userimg.png"></image>
+      </view>
+      <view class="username fl">
+        <text class="font34 font_blod color1470cc">用户名称</text>
+      </view>
+    </navigator>
     <navigator class="shopbtn fr font26 colorff9500 bgfff tc" url="{{isSetShop ? '/pages/shopInfo/shopInfo' : '/pages/register/register'}}">{{isSetShop ? "进入店铺" : "开设店铺"}}</navigator>
   </view>
   <!-- 用户信息 end -->
+  <!-- 搜索 start -->
+  <view class="search_cont color666 font26">
+    <view class="category">
+      <picker bindchange="categoryChange" value="{{categoryIndex}}" range="{{categoryArray}}" class="selected_options fl tc">店铺分类▽</picker>
+      <picker mode="region" bindchange="regionChange" value="{{region}}" custom-item="{{customItem}}" class="selected_options fl tc">所在地区▽</picker>
+      <picker bindchange="sortChange" value="{{sortIndex}}" range="{{sortArray}}" class="selected_options fl tc">排序方式▽</picker>
+    </view>
+    <view class="search">
+      <view class="search_input fl">
+        <input type="text" bindinput="getSearchVal" placeholder="请输入标签进行搜索" class="fl" />
+        <image src="/lib/images/search.png" class="fr"></image>
+      </view>
+      <button class="search_btn fr colorff9500" disabled="{{search_val==='' ? true : false}}" size="mini">搜索</button>
+    </view>
+  </view>
+  <!-- 搜索 end -->
   <!-- 店铺列表 start -->
   <view class="shopslist">
     <!-- 店铺简介 start -->
-    <view class="shopinfo" wx:for="{{shopsList}}" wx:key="index">
+    <navigator class="shopinfo" wx:for="{{shopsList}}" wx:key="index" url="/pages/shopInfo/shopInfo">
       <view class="shoptit">
         <view class="shopimg fl">
           <image class="img" src="{{item.img}}"></image>
         </view>
         <view class="shopname fr color666">
-          <image class="vipclass fl" src="{{vipClass[1]}}"></image>
-          <view class="name font32 color333 ellipsis fl">{{item.name}}</view>
-          <image class="area" src="/lib/images/area.png"></image>
-          <text class="font28">{{item.area}}</text>
+          <view class="vip_name">
+            <image class="vipclass fl" wx:if="{{!vipClass[1]}}" src="{{vipClass[1]}}"></image>
+            <view class="name font32 color333 ellipsis fl">{{item.name}}</view>
+          </view>
+          <view class="area_box">
+            <image class="area" src="/lib/images/area.png"></image>
+            <text class="font28">{{item.area}}</text>
+          </view>
         </view>
       </view>
       <view class="shoptags">
         <!-- 店铺标签 start -->
-        <text wx:for="{{item.tags}}" wx:key="index" class="tags font26 color333 bgcecece">{{item}}</text>
+        <text wx:for="{{item.tags}}" wx:key="index" class="tags font24 color333 bgcecece">{{item}}</text>
         <!-- 店铺标签 end -->
       </view>
-      <view>
-        <text>{{item.des}}</text>
+      <view class="shopdes">
+        <view class="font28 color666 ellipsis">{{item.des}}</view>
       </view>
-    </view>
+    </navigator>
     <!-- 店铺简介 end -->
   </view>
   <!-- 店铺列表 end -->
