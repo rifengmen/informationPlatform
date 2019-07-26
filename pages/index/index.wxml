@@ -25,7 +25,7 @@
         <input type="text" bindinput="getSearchVal" placeholder="请输入标签进行搜索" class="fl" />
         <image src="/lib/images/search.png" class="fr"></image>
       </view>
-      <button class="search_btn fr colorff9500" disabled="{{search_val==='' ? true : false}}" size="mini">搜索</button>
+      <button class="search_btn font26 fr colorff9500" disabled="{{search_val==='' ? true : false}}">搜索</button>
     </view>
   </view>
   <!-- 搜索 end -->
@@ -39,12 +39,13 @@
         </view>
         <view class="shopname fr color666">
           <view class="vip_name">
-            <image class="vipclass fl" wx:if="{{!vipClass[1]}}" src="{{vipClass[1]}}"></image>
-            <view class="name font32 color333 ellipsis fl">{{item.name}}</view>
+            <image class="vipclass fl" wx:if="{{vipClass[item.vip]}}" src="{{vipClass[item.vip]}}"></image>
+            <view class="name font30 color333 ellipsis fl">{{item.name}}</view>
           </view>
+          <view class="shopcategory font24 colorfff bg1470cc">{{categoryArray[item.category]}}</view>
           <view class="area_box">
             <image class="area" src="/lib/images/area.png"></image>
-            <text class="font28">{{item.area}}</text>
+            <text class="font26">{{item.area}}</text>
           </view>
         </view>
       </view>
