@@ -158,21 +158,29 @@ Page({
       mask: true
     })
     wx.request({
-      url: 'http://www.baidu00.com',
-      success:function(){
-        wx.hideLoading()
-        console.log('success')
+      url: app.globalData.HOST + '',
+      method:"post",
+      data: {
+        code: 123
       },
-      fail: function () {
-        wx.hideLoading()
-        wx.showToast({
-          title: '网络异常',
-          icon: 'loading',
-          duration: 2000
-        })
-        setTimeout(function () { wx.hideToast()},2000)
-      }
+      success: function () { }
     })
+    // wx.request({
+    //   url: 'http://www.baidu00.com',
+    //   success:function(){
+    //     wx.hideLoading()
+    //     console.log('success')
+    //   },
+    //   fail: function () {
+    //     wx.hideLoading()
+    //     wx.showToast({
+    //       title: '网络异常',
+    //       icon: 'loading',
+    //       duration: 2000
+    //     })
+    //     setTimeout(function () { wx.hideToast()},2000)
+    //   }
+    // })
   },
   // 上拉触底加载
   onReachBottom: function () {
